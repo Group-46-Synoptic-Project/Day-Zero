@@ -14,7 +14,8 @@ const translations = {
         'img': 'رابط الصورة',
         'desc': 'وصف',
         'submit': 'خضع',
-        'thanks': 'شكرا على مشاركتك. سيقوم المشرف بمراجعة هذا في غضون 72 ساعة.'
+        'thanks': 'شكرا على مشاركتك. سيقوم المشرف بمراجعة هذا في غضون 72 ساعة.',
+        'translate': 'هل تريد المساعدة في ترجمة هذا العنصر؟'
     },
 
     'en': {
@@ -23,7 +24,8 @@ const translations = {
         'img': 'Image URL',
         'desc': 'Description',
         'submit': 'Submit',
-        'thanks': 'Thank you for your submission. The admin will review this within 72 hours.'
+        'thanks': 'Thank you for your submission. The admin will review this within 72 hours.',
+        'translate' : 'Do you want to help translate this item?'
     },
 
     'uk': {
@@ -32,7 +34,8 @@ const translations = {
         'img': 'URL зображення',
         'desc': 'Опис',
         'submit': 'Подати',
-        'thanks': 'Дякуємо за вашу пропозицію. Адміністратор перегляне це протягом 72 годин.'
+        'thanks': 'Дякуємо за вашу пропозицію. Адміністратор перегляне це протягом 72 годин.',
+        'translate': 'Хочете допомогти перекласти цей елемент?'
     },
 
     'zh': {
@@ -41,7 +44,8 @@ const translations = {
         'img': '图片网址',
         'desc': '描述',
         'submit': '提交',
-        'thanks': '感谢您的提交。管理员将在72小时内审核此内容。'
+        'thanks': '感谢您的提交。管理员将在72小时内审核此内容。',
+        'translate': '你想帮忙翻译这个项目吗？'
     },
 
     'ps': {
@@ -50,7 +54,8 @@ const translations = {
         'img': 'د عکس URL',
         'desc': 'تشریح',
         'submit': 'پیښه کړئ',
-        'thanks': 'مننه چې د خپلو ملګرو سره ورکړئ. ادمین دا له 72 ساعتونو کې چیک کړي.'
+        'thanks': 'مننه چې د خپلو ملګرو سره ورکړئ. ادمین دا له 72 ساعتونو کې چیک کړي.',
+        'translate': 'ایا تاسو غواړئ د دې توکي په ژباړلو کې مرسته وکړئ؟'
     }
 };
 
@@ -79,6 +84,30 @@ function toggleAttraction(attractionId) {
     }
 }
 
+function checkTranslate() {
+    var yesno
+    yesno = confirm(translations[currentLang]['translate']);
+    if (yesno == true) {
+        // show form to accept translation
+        const newForm = document.createElement('form');
+        newForm.id = 'new-attraction-form';
+        newForm.innerHTML = `
+                <label for="title">${translations[currentLang]['title']}:</label><br>
+                <input type="text" id="title" name="title" required><br>
+                <label for="desc">${translations[currentLang]['desc']}:</label><br>
+                <textarea id="desc" name="desc" required></textarea><br>
+                <input type="submit" value="${translations[currentLang]['submit']}">
+            `;
+        document.body.appendChild(newForm);
+        newForm.addEventListener('submit', function (e) {
+            e.preventDefault(); // prevent the form from submitting normally
+            addTranslation(newForm); // pass the form to the addAttraction function
+            document.body.removeChild(newForm);  // Remove form after submission
+            alert(translations[currentLang]['thanks']);  // Show a pop-up message
+        });
+    }
+}
+
 function addAttraction(form) {
     const title = form.title.value;
     const img = form.img.value;
@@ -89,6 +118,34 @@ function addAttraction(form) {
     newAttraction.innerHTML = `
     <div class="attraction-header" style="display: none;">
         <img src="${img}" alt="${title}">
+        <h2>
+            <span lang="en">${title}</span>
+            <span lang="ar" style="display: none;">${title}</span>
+            <span lang="uk" style="display: none;">${title}</span>
+            <span lang="zh" style="display: none;">${title}</span>
+            <span lang="ps" style="display: none;">${title}</span>
+        </h2>
+    </div>
+    <div style="display: none;">
+        <p lang="en">${desc}</p>
+        <p lang="ar" style="display: none;">${desc}</p>
+        <p lang="uk" style="display: none;">${desc}</p>
+        <p lang="zh" style="display: none;">${desc}</p>
+        <p lang="ps" style="display: none;">${desc}</p>
+    </div>
+`;
+    document.querySelector('.attractions').appendChild(newAttraction);
+    form.reset(); // reset the form
+}
+
+function addTranslation(form) {
+    const title = form.title.value;
+    const desc = form.desc.value;
+
+    const newAttraction = document.createElement('div');
+    newAttraction.className = 'attraction';
+    newAttraction.innerHTML = `
+    <div class="attraction-header" style="display: none;">
         <h2>
             <span lang="en">${title}</span>
             <span lang="ar" style="display: none;">${title}</span>
