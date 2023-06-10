@@ -2,7 +2,7 @@
 
 ![Govantage Logo](logo.png) *(Insert a logo or relevant image here)*
 
-Govantage harnesses the power of community collaboration to break down language barriers, fostering a deeper understanding and appreciation of Govan's rich history and culture among refugees and asylum seekers, thus aiding their integration and enriching our shared community.
+Jack Govantage harnesses the power of community collaboration to break down language barriers, fostering a deeper understanding and appreciation of Govan's rich history and culture among refugees and asylum seekers, thus aiding their integration and enriching our shared community.
 
 ## Table of Contents
 
