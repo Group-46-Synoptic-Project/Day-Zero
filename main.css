@@ -1,0 +1,382 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html{
+    /* background-image: linear-gradient( #e7f1ef,#bad6d1); */
+    background-repeat: no-repeat;
+    background-color: #eeeeee;
+}
+
+/* HEADER =============================================================================*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* vertical */
+    padding: 25px;
+    position: sticky;
+    top: 0px;
+    margin-bottom: 20px;
+    background-color: #388DBE;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    min-height: 80px;
+}
+
+.logo{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 350px;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    cursor: pointer;
+    padding: 0px;
+  }
+
+  #dropdownIcon{
+    display: inline-block;
+    width: 100px;
+  }
+  #closeIcon{
+    display: block;
+    height: 60px;
+    position: absolute;
+    margin-top: 10px;
+  }
+  #dropdownIcon.cross{
+    /* margin-top: 0px;
+    font-size: 75px; */
+  }
+  
+  #menu {
+    position: fixed;
+    display: block; /* change "none" to "block" */
+
+    background-color: #388DBE;
+    /* add shadow to right side of menu*/
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+    
+
+
+    top: 0; /* change the initial position to be off-screen */
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    z-index: 2;
+
+    transition: all 0.5s ease-in-out; /* add a transition to all properties */
+    
+    border: 4px solid black;
+    border-left: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#menu.show {
+    left: 0px; /* adjust this value to position the menu below the header */
+}
+  
+  #menu li {
+    padding: 25px;
+
+
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-bottom: 40px;
+
+    border: 4px outset black;
+    border-radius: 10px;
+    background-color: white;
+
+    font-size: 40px;
+    text-align: left;
+    color: black;
+    font-weight: bold;
+  }
+  #menu li:hover {
+    background-color: #eee;
+  }
+
+  #menuTitle{
+    text-align: center;
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    font-size: 65px;
+    border: none;
+  }
+  h3{
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    padding: 25px;
+    padding-bottom: 60px;
+  }
+
+#languagesSymbol{
+    width: 100px;
+}
+
+/* MAIN =============================================================================*/
+main{
+    padding: 25px;
+    min-height: 80vh;
+}
+h1{
+    font-size: 57px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 100px;
+}
+
+.indexContainer{
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+}
+
+.card{
+  padding: 25px;
+  width: 600px;
+  height: 330px;
+
+  margin-bottom: 100px;
+  border-radius: 10px;
+  display: inline-block;
+  border: 4px outset black;
+
+  cursor: pointer;
+
+  background-position: center;
+  background-size: cover;
+
+  /* box-shadow: 0 4px 8px 0 rgba(30, 30, 30, 0.4), 0 6px 20px 0 rgba(30, 30, 30, 0.39); */
+}
+
+
+h2{
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(37, 37, 37);
+
+  text-align: center;
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+.cardAdd{
+  background: url(images/add_symbol.png), white;
+  background-size: 220px;
+  background-repeat: no-repeat;
+  background-position: center -50px;
+  background-blend-mode: normal;
+  height: 200px;
+}
+.cardAdd h2{
+  line-height: 1;
+  margin-top: calc(200px - 80px);
+  padding-top: 0px;
+}
+
+.card2{
+  background: linear-gradient(#ffffffe5 50%, transparent 50%, transparent), url(images/fairfield.jpeg);
+  background-size: cover;
+}
+
+.card3{
+  background: linear-gradient(#ffffffe5 50%, transparent 50%, transparent), url(images/riverside_museum.jpeg);
+  background-size: cover;
+}
+
+.card4{
+  background: linear-gradient(#ffffffe5 50%, transparent 50%, transparent), url(images/old_govan.jpeg);
+  background-size: cover;
+}
+
+.card5{
+  background: linear-gradient(#ffffffe5 50%, transparent 50%, transparent), url(images/glenlee_ship.jpeg);
+  background-size: cover;
+}
+
+/* FOOTER =============================================================================*/
+footer{
+    font-size: 32px;
+    color:rgba(0, 0, 0, 0.624);
+    padding: 25px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: rgba(255, 255, 255, 0.691);
+    margin-top: 50px;
+}
+
+
+
+
+/* addAttraction.html =============================================================================*/
+.formContainer{
+  /* WIP */
+  margin-top: 100px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+  label{
+    font-size: 40px;
+    font-weight: bold;
+
+    display: block;
+
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  input, select{
+    display: block;
+    box-sizing: border-box;
+
+    font-size: 32px;
+    background-color: white;;
+
+    padding: 25px;
+    margin: 10px 0px;
+    margin-bottom: 75px;
+
+    width: 100%;
+
+    border-width: 2px;
+    border-radius: 6px;
+    border-style: solid;
+    border-color: #00000092;
+  }
+  select{
+    /* remove default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  
+    /* Add custom select arrow */
+    background-image: url('images/selectArrow.png'); /* #E9EFFF; */
+    background-position: right 25px center;
+    background-repeat: no-repeat;
+    background-size: 40px;
+    padding-right: 40px; /* Adjust the select padding so that text doesnt overlap the arrow */
+  }
+
+  .width50p{
+    width: 50%;
+  }
+
+  textarea{
+    display: block;
+    box-sizing: border-box;
+
+    font-size: 32px;
+    background-color: white;;
+
+    padding: 25px;
+    margin: 10px 0px;
+    margin-bottom: 75px;
+
+    width: 100%;
+
+    border-width: 2px;
+    border-radius: 6px;
+    border-style: solid;
+    border-color: #00000092;
+  }
+
+  .submitButton {
+    background-color: #E9EFFF;
+    color: black;
+
+    border: 4px outset black;
+    border-radius: 10px;
+    
+    padding: 25px;
+    width: 300px;
+
+    margin-left: auto; /* push button to right side */
+    margin-top: 100px;
+
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 32px;
+
+    cursor: pointer;
+  }
+
+/* languages.html =============================================================================*/
+
+#languageTitle{
+  margin-bottom: 100px;
+  margin-top: 10px;
+}
+
+.languageCode{
+  display: inline-block;
+  font-size: 55px;
+  width: 170px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 30px;
+
+  margin-left: 50px;
+  border: black 2px solid;
+  border-radius: 6px;
+  margin-bottom: 75px;
+}
+
+.languageName{
+  display: inline-block;
+  font-size: 45px;
+  margin-left: 50px;
+}
+
+
+/* attraction.html =============================================================================*/
+
+.contentContainer{
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 100px;
+}
+
+#videoContainer{
+  display: flex;
+  justify-content: center; /* align horizontal */
+  border: 4px solid black;
+  border-radius: 6px;
+}
+
+#video{
+  /* width: 100%; */
+  
+}
+
+#textContainer{
+  margin-top: 130px;
+  padding: 50px;
+  width: 100%;
+  box-sizing: border-box;
+
+  font-size: 24px;
+  background-color: white;
+
+  border: 4px solid black;
+  border-radius: 6px;
+}

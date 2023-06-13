@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="main.css">
     <script src="javascript/features/navBar.js" defer></script>
     <script src="javascript/features/languageFeatures.js" defer></script>
-    <script src="javascript/pages/attractions.js" defer></script>
+    <script src="javascript/pages/attraction.js" defer></script>
+    <script src="javascript/features/videos.js" defer></script>
 </head>
 
 <body>
@@ -36,38 +37,36 @@
 
 
     <main>
+        <div class="contentContainer">
 
-        <!-- ======= TITLE ======= -->
-        <h1 class="translatable" dataTranslate="attractions"></h1>
+            <!-- ======= TITLE ======= -->
+            <h1 id="attractionTitle" class="translatable" dataTranslate=""></h1>
 
-
-        <div class="indexContainer">
-
-            <!-- ======= ADD NEW ATTRACTION ======= -->
-            <div class="card cardAdd" href="addAttraction.html">
-                <h2 class="translatable" dataTranslate="add_new_attraction"></h2>
-            </div>
-
-            <!-- ======= ATTRACTION CARDS ======= -->
-            <div class="card card2" href="attraction.html">
-                <h2 class="translatable" dataTranslate="fairfield_shipyard" ></h2>
-            </div>
-
-            <!-- WIP -->
-            <div class="card card3" href="attraction.html">
-                <h2 class="translatable" dataTranslate="riverside_museum" >title</h2>
-            </div>
-
-            <div class="card card4" href="attraction.html">
-                <h2 class="translatable" dataTranslate="govan_old" >title</h2>
+            <!-- ======= VIDEO ======= -->
+            <div id="videoContainer">
+                <iframe id="video" 
+                    videoKey=""    
+                    width="1000" 
+                    height="500" 
+                    src=""
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
             </div>
             
-            <div class="card card5" href="attraction.html">
-                <h2  class="translatable" dataTranslate="glenlee_ship" >title</h2>
-            </div>
             
+            <div id="textContainer">
+                <!-- ======= TEXT TO SPEECH ======= -->
+                
+
+                <!-- ======= TEXT ======= -->
+                <p id="attractionText" class="translatable" dataTranslate=""></p>
+
+            </div>
+
         </div>
-
     </main>
         
 

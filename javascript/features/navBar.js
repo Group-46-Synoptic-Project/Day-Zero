@@ -1,3 +1,4 @@
+
 // HAMBURGER MENU================================================
 var menuToggle = document.getElementById('menu-toggle');
 var menu = document.getElementById('menu');
@@ -24,8 +25,13 @@ window.onclick = function(event) {
   }
 }
 
+
 // NAVIGATION ===================================================
 let languagesSymbol = document.getElementById('languagesSymbol');
 languagesSymbol.addEventListener('click', function() {
     document.location='languages.html';
 });
+
+
+
+

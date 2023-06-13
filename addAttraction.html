@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Govantage - Attractions</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <script src="javascript/features/navBar.js" defer></script>
+    <script src="javascript/features/languageFeatures.js" defer></script>
+    <script src="javascript/pages/addAttraction.js" defer></script>
+</head>
+
+<body>
+    
+    <!-- ======= NAV BAR ======= -->
+    <header>
+        
+            <!-- <button id="switch-lang">Switch Language</button> -->
+            <div id="menu-toggle" title="Menu"><img id="dropdownIcon" src="images/menu_icon.png"></div>
+            <img src="images/placeholderLogo.png" class="logo"> <!-- placeholder logo -->
+            <img src="images/languages_icon.png" id="languagesSymbol">
+            <!-- <nav>
+            </nav> -->
+    </header>
+
+    <!-- ======= HAMBURGER MENU ======= -->
+    <ul id="menu">
+        <h3> <img id="closeIcon" src="images/x_icon.png"> 
+            <div id="menuTitle" class="translatable" dataTranslate="menu"></div>
+        </h3>
+
+
+        <a href="attractions.html"> <li class="translatable" dataTranslate="attractions"></li> </a>
+
+        <a href="about.html"> <li class="translatable" dataTranslate="about_us"></li> </a>
+    </ul>
+
+
+    
+    <main>
+
+        <!-- ======= TITLE ======= -->
+        <h1 class="translatable" dataTranslate="add_new_attraction"></h1>
+
+        <div class ="formContainer">
+            <form class ="margin50" onsubmit="return false;"> 
+        
+                <label for="language" class="translatable" dataTranslate="language">Language</label>		
+                <select name="language" id="language" class="width50p">
+                    <option value="" disabled selected class="translatable" dataTranslate="select_a_language"></option> <!-- placeholder -->
+                    <option value="english">English</option>
+                    <option value="arabic">العَرَبيّةالفـُصحى</option>
+                    <option value="ukrainian">українська</option>
+                    <option value="cantonese">广东话</option>
+                    <option value="french">Français</option>
+                </select>
+                
+                <label for="name" class="translatable" dataTranslate="name">Name</label>		
+                <input type="text" name="name" id="name" class="width50p">
+                
+                <label for="video" class="translatable" dataTranslate="video">Video</label>	
+                <input type="text" name="video" id="video">
+                    
+                <!--multiline-->
+                <label for="description" class="translatable" dataTranslate="description"></label>	
+                <textarea name="description" id="description" rows="10"></textarea>
+                
+                <input class="submitButton translatableButton" dataTranslateButton="submit" type="submit" name="submit" value="Submit" onclick="return false;" >
+            
+            </form>  
+        </div>
+
+    </main>
+        
+    <footer class="translatable" dataTranslate="footer"></footer>
+
+</body>
+
+</html>
