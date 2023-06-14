@@ -38,23 +38,15 @@
 
     
     <main>
+        <a href="attractions.html" id="back-arrow"></a>
+
 
         <!-- ======= TITLE ======= -->
         <h1 class="translatable" dataTranslate="add_new_attraction"></h1>
 
         <div class ="formContainer">
             <form class ="margin50" onsubmit="return false;"> 
-        
-                <label for="language" class="translatable" dataTranslate="language">Language</label>		
-                <select name="language" id="language" class="width50p">
-                    <option value="" disabled selected class="translatable" dataTranslate="select_a_language"></option> <!-- placeholder -->
-                    <option value="english">English</option>
-                    <option value="arabic">العَرَبيّةالفـُصحى</option>
-                    <option value="ukrainian">українська</option>
-                    <option value="cantonese">广东话</option>
-                    <option value="french">Français</option>
-                </select>
-                
+
                 <label for="name" class="translatable" dataTranslate="name">Name</label>		
                 <input type="text" name="name" id="name" class="width50p">
                 
@@ -62,6 +54,7 @@
                 <input type="text" name="video" id="video">
                     
                 <!--multiline-->
+    
                 <label for="description" class="translatable" dataTranslate="description"></label>	
                 <textarea name="description" id="description" rows="10"></textarea>
                 

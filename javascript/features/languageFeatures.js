@@ -30,7 +30,7 @@ const translations = {
 
         glenlee_ship: "The Tall Ship Glenlee",
         glenlee_ship_desc: "From a British cargo vessel, an Italian ship of mystery, to a sail training icon of the Spanish Navy, the Tall Ship Glenlee has adapted to many changes over her 126-year history. The sail-powered cargo vessel circumnavigated the globe several times, underpinned by the famous Clydebuilt steel hull that has far outlived her original purpose when she found new life as a naval classroom for building maritime skills for over 70 years in Spain.",
-
+        
     },
     ar: {
         //all pages
