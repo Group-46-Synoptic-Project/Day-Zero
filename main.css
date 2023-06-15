@@ -41,12 +41,12 @@ header{
     cursor: pointer;
 }
 
-#menu-toggle {
+#menuToggle {
     cursor: pointer;
     padding: 0px;
   }
 
-  #dropdownIcon{
+  #menuIcon{
     display: inline-block;
     width: 100px;
   }
@@ -55,10 +55,6 @@ header{
     height: 60px;
     position: absolute;
     margin-top: 10px;
-  }
-  #dropdownIcon.cross{
-    /* margin-top: 0px;
-    font-size: 75px; */
   }
   
   #menu {
